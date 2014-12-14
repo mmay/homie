@@ -22,6 +22,7 @@ type Person struct {
 	Slideshare  string `json:"slideshare"`
 	Speakerdeck string `json:"speakerdeck"`
 	Other       string `json:"other"`
+	FreeDNS     string `json:"getfreedns"`
 	Meta        Meta   `json:"meta"`
 }
 
@@ -40,6 +41,7 @@ func base(w http.ResponseWriter, r *http.Request) {
 		Gh:          "https://github.com/mmay",
 		Speakerdeck: "https://speakerdeck.com/mmay",
 		Slideshare:  "http://www.slideshare.net/iammichaelmay",
+		FreeDNS:     "https://dnsimple.com/r/4b4375226280a9",
 		Meta: Meta{
 			Time:     time.Now(),
 			UnixTime: time.Now().Unix()}}
